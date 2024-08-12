@@ -185,7 +185,7 @@ def display_collision3D(collision,fig=None,ax=None,color_blind=False,experiment=
 
     if ax is None:
         ax = fig.add_subplot(1,1,1)
-        ax = fig.gca(projection='3d')
+        ax = fig.add_subplot(projection='3d')
         plt.subplots_adjust(top=0.98,bottom=0.02,right=0.98,left=0.02)
 
     new_objects = None
@@ -306,7 +306,7 @@ def display_collision3D_animate(collisions,fig=None):
     if fig is None:
         fig = plt.figure(figsize=(6,4),dpi=100)
     ax = fig.add_subplot(1,1,1)
-    ax = fig.gca(projection='3d')
+    ax = fig.add_subplot(projection='3d')
     plt.subplots_adjust(top=0.98,bottom=0.02,right=0.98,left=0.02)
 
     if type(collisions[0][0][0]) is not list:
